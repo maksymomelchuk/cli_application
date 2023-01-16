@@ -26,12 +26,12 @@ async function invokeAction({ action, id, name, email, phone }) {
       break
 
     case 'get':
-      const getedContact = await getContactById(id)
-      if (!getedContact) {
+      const contact = await getContactById(id)
+      if (!contact) {
         console.log('No such contact exists')
         break
       }
-      console.log(getedContact)
+      console.log(contact)
       break
 
     case 'add':
